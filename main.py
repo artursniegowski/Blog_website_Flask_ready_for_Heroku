@@ -419,4 +419,4 @@ if __name__ == "__main__":
     # > flask run
     # start server
     # in a debug mode not suitable for production !!
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=False)
