@@ -1,6 +1,6 @@
 from custom_decorators import admin_only
 from datetime import date
-from env_variables import FLASK_SECRET_KEY, GMAIL_APP_PASSWORD, HOST_EMAIL_FOR_CONTACT_FORM, MY_EMAIL 
+from env_variables import FLASK_SECRET_KEY, GMAIL_APP_PASSWORD, HOST_EMAIL_FOR_CONTACT_FORM, MY_EMAIL, POSTGRESSQL_DATABASE_URL 
 from flask import Flask, render_template, redirect, url_for, request, flash
 from flask_bootstrap import Bootstrap
 from flask_ckeditor import CKEditor
@@ -51,7 +51,9 @@ gravatar = Gravatar(app,
 # create the extension
 db = SQLAlchemy()
 # configure the SQLite database, relative to the app instance folder
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
+# Upgrade SQLite Database to PostgreSQL - Heroku - resources tab PostgreSQL added
+app.config['SQLALCHEMY_DATABASE_URI'] = POSTGRESSQL_DATABASE_URL
 # initialize the app with the extension
 db.init_app(app)
 
