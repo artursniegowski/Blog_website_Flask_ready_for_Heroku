@@ -26,7 +26,7 @@ HOST_EMAIL_FOR_CONTACT_FORM = os.environ.get("HOST_EMAIL_FOR_CONTACT_FORM")
 # The URI should start with postgresql:// instead of postgres://. 
 # SQLAlchemy used to accept both, but has removed support for the postgres name.
 # for the DATABASE_URL
-POSTGRESSQL_DATABASE_URL = os.environ.get("DATABASE_URL", 'sqlite:///blog.db')
-if 'postgres://' in POSTGRESSQL_DATABASE_URL:
-    POSTGRESSQL_DATABASE_URL = POSTGRESSQL_DATABASE_URL.replace('postgres://', 'postgresql://')
+POSTGRESQL_DATABASE_URL = os.environ.get("DATABASE_URL", 'sqlite:///blog.db')
+if 'postgres://' in POSTGRESQL_DATABASE_URL:
+    POSTGRESQL_DATABASE_URL = POSTGRESQL_DATABASE_URL.replace('postgres://', 'postgresql://')
 ################################################################################
