@@ -65,7 +65,7 @@ Database Schema:</br>
 
 ---
 
-Useful Links.
+Useful Links:
 
 
 Deploying your web application with heroku </br>
