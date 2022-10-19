@@ -1,4 +1,4 @@
-# Blog_website_Flask_Heroku_ready
+# Blog_website_Flask_ready_for_Heroku
 This is a fully-fledged blog website that is ready to be published and launched on Heroku (https://www.heroku.com/). The blog was developed using the Python framework Flask. The styling was done with the help of additional Bootstrap templates (https://startbootstrap.com/previews/clean-blog), Flask-Bootstrap, Bootstrap, and CSS. Some extra functionality like registering and authenticating users was added, as well as the ability for authenticated users to comment on blog posts. </br>
 The main features are:</br>
 - RESTful Blog: with the blog you will be able to create new posts, edit and delete existing posts from the database (Flask HTTP requests and forms WTF). Only the admin user (id = 1), the first user to register on the blog, will have these rights. </br>
@@ -158,13 +158,13 @@ Next you will have to select (search by name) your repository that you created a
 In your app, under the Resources tab, add an add-on called Heroku Postgres, and choose a free plan.
 By doing so, you should see under settings in the section of Config Vars a defined variable DATABASE_URL - at this point, the website will use the new PostgreSQL database.</br>
 Add the rest of the variables by defining:</br>
-### your secret flask key ###</br>
+**your secret flask key**</br>
 FLASK_SECRET_KEY = 'your_secret_key_keep_it_secret'</br>
-### a Gmail account through which emails will be sent ###</br>
+**a Gmail account through which emails will be sent**</br>
 MY_EMAIL = "EXAMPLE.USER@gmail.com"</br>
-### your gmail app password ###</br>
+**your gmail app password**</br>
 GMAIL_APP_PASSWORD = "GMAIL_APP_PASSWORD"</br>
-### where all the emails from the contact form will be sent to ###</br>
+**where all the emails from the contact form will be sent to**</br>
 HOST_EMAIL_FOR_CONTACT_FORM = "YOUR_HOST_EMAIL_FOR_CONTACT_FORM@gmail.com"</br>
 13. Now your website should be running. You will have to register the first user that will be the admin and then you will be able to add/create posts.</br>
 
