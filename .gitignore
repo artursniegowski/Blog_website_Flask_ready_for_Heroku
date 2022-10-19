@@ -3,8 +3,8 @@
 
 ### Flask ###
 # normally you dont want to add your database !
-instance/*
-!instance/.gitignore
+# instance/*
+# !instance/.gitignore
 .webassets-cache
 .env
 
@@ -74,7 +74,7 @@ db.sqlite3-journal
 
 # Flask stuff:
 # normally you dont want to add your database !
-instance/
+# instance/
 
 # Scrapy stuff:
 .scrapy
