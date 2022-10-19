@@ -1,5 +1,5 @@
-# 13_Blog_website_heroku_ready_part_V
-This is a fully-fledged blog website that is ready to be published and launched on Heroku (https://www.heroku.com/). It's an upgraded version of the previous blog website (10_RESTful_Blog_website_part_IV). The blog was developed using the Python framework Flask. The styling was done with the help of additional Bootstrap templates (https://startbootstrap.com/previews/clean-blog), Flask-Bootstrap, Bootstrap, and CSS. Some extra functionality like registering and authenticating users was added, as well as the ability for authenticated users to comment on blog posts. </br>
+# Blog_website_Flask_Heroku_ready
+This is a fully-fledged blog website that is ready to be published and launched on Heroku (https://www.heroku.com/). The blog was developed using the Python framework Flask. The styling was done with the help of additional Bootstrap templates (https://startbootstrap.com/previews/clean-blog), Flask-Bootstrap, Bootstrap, and CSS. Some extra functionality like registering and authenticating users was added, as well as the ability for authenticated users to comment on blog posts. </br>
 The main features are:</br>
 - RESTful Blog: with the blog you will be able to create new posts, edit and delete existing posts from the database (Flask HTTP requests and forms WTF). Only the admin user (id = 1), the first user to register on the blog, will have these rights. </br>
 - Authentication-users for the website and giving different permissions. There will be 3 groups that are distinguished: admin, logged users, and anonymous users (not logged in). </br>
@@ -143,30 +143,30 @@ user id = 2 </br>
 email: tester@gmail.com</br>
 password: tester</br>
 Alternatively, you can simply delete the database instance/blog.db and then run main.py.
-A new empty database will be created, and you will have to register the users and create new posts (the first registered user will become the admin!).
-I recommend using the SQLite browser to explore the data currently saved in the database.
-6. Execute main.py to ensure that the website is operational on your local host.
---- Next step is deploying and launching on Heroku ---
-7. Download and install git https://git-scm.com/.
-8. Sign up for a free Github account at https://github.com/.
+A new empty database will be created, and you will have to register the users and create new posts (the first registered user will become the admin!).</br>
+I recommend using the SQLite browser to explore the data currently saved in the database.</br>
+6. Execute main.py to ensure that the website is operational on your local host.</br>
+--- Next step is deploying and launching on Heroku ---</br>
+7. Download and install git https://git-scm.com/.</br>
+8. Sign up for a free Github account at https://github.com/.</br>
 9. Using git version control, commit your project locally and create a new repository on GitHub.
-You will have to push your local commit to it.
-10. Sign up for a free Heroku account at https://www.heroku.com/.
+You will have to push your local commit to it.</br>
+10. Sign up for a free Heroku account at https://www.heroku.com/.</br>
 11. Create a new Heroku app, select GitHub as the deployment method, and connect to your account.
-Next you will have to select (search by name) your repository that you created and pushed to your local commit (see step 9). Dont forget to enable Automatic Deploys - this means that whenever you push a new commit to your remote GitHub repository, it will automatically re-deploy your server with the changes. Next, you will have to deploy the Brnach.
+Next you will have to select (search by name) your repository that you created and pushed to your local commit (see step 9). Dont forget to enable Automatic Deploys - this means that whenever you push a new commit to your remote GitHub repository, it will automatically re-deploy your server with the changes. Next, you will have to deploy the Brnach.</br>
 12. The final step is to define your environmental variables and upgrade from SQLite to PostgreSQL.
 In your app, under the Resources tab, add an add-on called Heroku Postgres, and choose a free plan.
-By doing so, you should see under settings in the section of Config Vars a defined variable DATABASE_URL - at this point, the website will use the new PostgreSQL database.
-Add the rest of the variables by defining:
-### your secret flask key ###
-FLASK_SECRET_KEY = 'your_secret_key_keep_it_secret'
-### a Gmail account through which emails will be sent ###
-MY_EMAIL = "EXAMPLE.USER@gmail.com"
-### your gmail app password ###
-GMAIL_APP_PASSWORD = "GMAIL_APP_PASSWORD"
-### where all the emails from the contact form will be sent to ###
-HOST_EMAIL_FOR_CONTACT_FORM = "YOUR_HOST_EMAIL_FOR_CONTACT_FORM@gmail.com"
-13. Now your website should be running. You will have to register the first user that will be the admin and then you will be able to add/create posts.
+By doing so, you should see under settings in the section of Config Vars a defined variable DATABASE_URL - at this point, the website will use the new PostgreSQL database.</br>
+Add the rest of the variables by defining:</br>
+### your secret flask key ###</br>
+FLASK_SECRET_KEY = 'your_secret_key_keep_it_secret'</br>
+### a Gmail account through which emails will be sent ###</br>
+MY_EMAIL = "EXAMPLE.USER@gmail.com"</br>
+### your gmail app password ###</br>
+GMAIL_APP_PASSWORD = "GMAIL_APP_PASSWORD"</br>
+### where all the emails from the contact form will be sent to ###</br>
+HOST_EMAIL_FOR_CONTACT_FORM = "YOUR_HOST_EMAIL_FOR_CONTACT_FORM@gmail.com"</br>
+13. Now your website should be running. You will have to register the first user that will be the admin and then you will be able to add/create posts.</br>
 
 ---
 
@@ -239,7 +239,7 @@ HOST_EMAIL_FOR_CONTACT_FORM = "YOUR_HOST_EMAIL_FOR_CONTACT_FORM@gmail.com"
 
 ---
 
-**The program was developed using python 3.10.6, Flask 2.2, Flask-Login, Flask - Message Flashing, Flask-Bootstrap, Flask-CKEditor, Flask-SQLAlchemy, Flask-WTF, SQLite, Email SMTP, Hashing passwords with Wergzeug, Flask-Gravatar, Customized Flask decorators**
+**The program was developed using python 3.10.6, Flask 2.2, Flask-Login, Flask - Message Flashing, Flask-Bootstrap, Flask-CKEditor, Flask-SQLAlchemy, Flask-WTF, SQLite, PostgreSQL, Email SMTP, Hashing passwords with Wergzeug, Flask-Gravatar, Customized Flask decorators**
 
 In order to run the program, you have to execute main.py.
 And your website will be accessible under localhost:5000 (http://127:0:0:1:5000).
