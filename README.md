@@ -3,7 +3,7 @@ This is a fully-fledged blog website that is ready to be published and launched 
 The main features are:</br>
 - RESTful Blog: with the blog you will be able to create new posts, edit and delete existing posts from the database (Flask HTTP requests and forms WTF). Only the admin user (id = 1), the first user to register on the blog, will have these rights. </br>
 - Authentication-users for the website and giving different permissions. There will be 3 groups that are distinguished: admin, logged users, and anonymous users (not logged in). </br>
-- all the posts will be stored in a SQLite database and managed with Flask-SQLAlchemy.</br>
+- all the posts will be stored in a SQLite database and managed with Flask-SQLAlchemy.</br> 
 - use of Gravatar images to provide an avatar image for blog commenters.</br>
 - Making use of Relational Databases (one-to-many relationship).</br>
 - Message Flashing using Flask Flash to give feedback to the user. They will be visible only for one session. </br>
