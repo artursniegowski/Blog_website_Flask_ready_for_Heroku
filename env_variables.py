@@ -29,4 +29,8 @@ HOST_EMAIL_FOR_CONTACT_FORM = os.environ.get("HOST_EMAIL_FOR_CONTACT_FORM")
 POSTGRESQL_DATABASE_URL = os.environ.get("DATABASE_URL", 'sqlite:///blog.db')
 if 'postgres://' in POSTGRESQL_DATABASE_URL:
     POSTGRESQL_DATABASE_URL = POSTGRESQL_DATABASE_URL.replace('postgres://', 'postgresql://')
+# When developing locally, this will use port 5000, in production 
+# Heroku will set the PORT environment variable.
+# Bind to PORT if defined, otherwise default to 5000.
+PORT_HEROKU = int(os.environ.get('PORT', 5000))
 ################################################################################
