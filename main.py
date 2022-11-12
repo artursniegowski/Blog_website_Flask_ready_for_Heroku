@@ -1,6 +1,6 @@
 from custom_decorators import admin_only
 from datetime import date
-from env_variables import FLASK_SECRET_KEY, GMAIL_APP_PASSWORD, HOST_EMAIL_FOR_CONTACT_FORM, MY_EMAIL, POSTGRESQL_DATABASE_URL 
+from env_variables import FLASK_SECRET_KEY, GMAIL_APP_PASSWORD, HOST_EMAIL_FOR_CONTACT_FORM, MY_EMAIL, POSTGRESQL_DATABASE_URL, PORT_HEROKU
 from flask import Flask, render_template, redirect, url_for, request, flash
 from flask_bootstrap import Bootstrap
 from flask_ckeditor import CKEditor
@@ -421,4 +421,7 @@ if __name__ == "__main__":
     # > flask run
     # start server
     # in a debug mode not suitable for production !!
-    app.run(host="0.0.0.0", port=5000, debug=False)
+    # app.run(host="0.0.0.0", port=5000, debug=False)
+    # Setting host='0.0.0.0' will make Flask available from the network)
+    # Bind to PORT if defined, otherwise default to 5000.
+    app.run(host='0.0.0.0', port=PORT_HEROKU, debug=False)
